@@ -1,0 +1,18 @@
+{
+    "version": "3.3.2.0",
+    "description": "快压",
+    "homepage": "http://www.kuaizip.com/",
+    "license": "Freeware",
+    "url": "http://gwqd.kkdownload.com/Uploads/kzgw/kuaizip_setup_v3.3.2.0_kzgw_23.exe",
+    "hash": "336b2e93d84c0ce196be1cd98b75dbc32091c2a98286dd5221ca06dc7f879ad6",
+    "checkver": {
+        "url": "http://www.kuaizip.com/",
+        "regex": "kuaizip_setup_v([\\d.]+)_kzgw"
+    },
+    "autoupdate": {
+        "url": "http://gwqd.kkdownload.com/Uploads/kzgw/kuaizip_setup_v$version_kzgw_23.exe",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}
