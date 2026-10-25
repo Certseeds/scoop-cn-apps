@@ -10,9 +10,10 @@
         }
     },
     "checkver": {
-        "url": "https://api.github.com/repos/microsoft/winget-pkgs/contents/manifests/t/Tencent/WeixinDevTools",
-        "regex": "([\\d\\.]+)\"[\\s}\\]]+$",
-        "useragent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0"
+        "script": [
+            "$names = gh api 'repos/microsoft/winget-pkgs/contents/manifests/t/Tencent/WeixinDevTools' --jq '.[].name'",
+            "$names | Where-Object { $_ -match '^[0-9]' } | Sort-Object { [version]$_ } | Select-Object -Last 1"
+        ]
     },
     "autoupdate": {
         "architecture": {

@@ -10,15 +10,21 @@
         }
     },
     "checkver": {
-        "winget": {
-            "id": "Tencent.Yuanbao",
-            "ext": "exe"
-        }
+        "script": [
+            "$pkg = 't/Tencent/Yuanbao'",
+            "$names = gh api \"repos/microsoft/winget-pkgs/contents/manifests/$pkg\" --jq '.[].name'",
+            "$version = $names | Where-Object { $_ -match '^[0-9]' } | Sort-Object { [version]$_ } | Select-Object -Last 1",
+            "$yaml = (gh api -H 'Accept: application/vnd.github.raw' \"repos/microsoft/winget-pkgs/contents/manifests/$pkg/$version/Tencent.Yuanbao.installer.yaml\") -join \"`n\"",
+            "$url = [regex]::Match($yaml, 'Architecture: x64[\\s\\S]*?InstallerUrl:\\s*(\\S+)').Groups[1].Value",
+            "Write-Output \"$version|$url\""
+        ],
+        "regex": "([\\d.]+)\\|(https?://\\S+)",
+        "replace": "${1}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "$matchX64",
+                "url": "$match2",
                 "hash": {
                     "mode": "download"
                 }

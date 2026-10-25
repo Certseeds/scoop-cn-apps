@@ -5,7 +5,7 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "http://dldir1.qq.com/qqfile/crm/qidian/QiDian6.9.11.23618.exe",
+            "url": "https://dldir1.qq.com/qqfile/crm/qidian/QiDian6.9.11.23618.exe",
             "hash": "bbd53e106f33376e797afb6f77c8936942e9f17a27acbd482151c707806d51eb"
         }
     },
@@ -16,7 +16,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "http://dldir1.qq.com/qqfile/crm/qidian/QiDian$version.exe",
+                "url": "https://dldir1.qq.com/qqfile/crm/qidian/QiDian$version.exe",
                 "hash": {
                     "mode": "download"
                 }

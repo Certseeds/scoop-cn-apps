@@ -10,13 +10,18 @@
         }
     },
     "checkver": {
-        "url": "https://meeting.tencent.com/web-service/query-download-info?q=%5B%7B%22package-type%22%3A%22app%22%2C%22channel%22%3A%220300000000%22%2C%22platform%22%3A%22windows%22%2C%22arch%22%3A%22x86_64%22%7D%5D&nonce=iS5D7ipf63myinXi",
-        "regex": "\"md5\":\"(?<hash>[a-f0-9]+)\".+\"version\":\"([\\d\\.]+)\""
+        "script": [
+            "$r = Invoke-RestMethod 'https://meeting.tencent.com/web-service/query-download-info?q=%5B%7B%22package-type%22%3A%22app%22%2C%22channel%22%3A%220300000000%22%2C%22platform%22%3A%22windows%22%2C%22arch%22%3A%22x86_64%22%7D%5D&nonce=iS5D7ipf63myinXi'",
+            "$i = $r.'info-list'[0]",
+            "Write-Output \"$($i.md5)|$($i.version)\""
+        ],
+        "regex": "([a-f0-9]+)\\|([\\d.]+)",
+        "replace": "${2}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://updatecdn.meeting.qq.com/cos/$matchHash/TencentMeeting_0300000000_$version_x86_64.publish.officialwebsite.exe",
+                "url": "https://updatecdn.meeting.qq.com/cos/$match1/TencentMeeting_0300000000_$version_x86_64.publish.officialwebsite.exe",
                 "hash": {
                     "mode": "download"
                 }

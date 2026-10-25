@@ -3,26 +3,18 @@
     "description": "QQ浏览器",
     "homepage": "https://browser.qq.com/",
     "license": "Freeware",
-    "architecture": {
-        "32bit": {
-            "url": "https://dldir1.qq.com/invc/tt/QQBrowser_Setup_11.1.5155.400.exe",
-            "hash": "18ca900795b4f78c51f979c6417f1c05197ee9921e10c7b3ed78f5a54c5e58ec"
-        }
-    },
     "checkver": {
-        "winget": {
-            "id": "Tencent.QQBrowser",
-            "ext": "exe"
-        }
+        "script": [
+            "$names = gh api 'repos/microsoft/winget-pkgs/contents/manifests/t/Tencent/QQBrowser' --jq '.[].name'",
+            "$names | Where-Object { $_ -match '^[0-9]' } | Sort-Object { [version]$_ } | Select-Object -Last 1"
+        ]
     },
     "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "$matchX86",
-                "hash": {
-                    "mode": "download"
-                }
-            }
+        "url": "https://dldir1.qq.com/invc/tt/QQBrowser_Setup_$version.exe",
+        "hash": {
+            "mode": "download"
         }
-    }
+    },
+    "url": "https://dldir1.qq.com/invc/tt/QQBrowser_Setup_11.1.5155.400.exe",
+    "hash": "18ca900795b4f78c51f979c6417f1c05197ee9921e10c7b3ed78f5a54c5e58ec"
 }

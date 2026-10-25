@@ -10,7 +10,13 @@
         }
     },
     "checkver": {
-        "script": "return (iwr -useb 'https://work.weixin.qq.com/wework_admin/commdownload?platform=win&from=wwindex' -Method HEAD -MaximumRedirection 0 -SkipHttpErrorCheck -ErrorAction:SilentlyContinue).Headers['Location']",
+        "script": [
+            "$req = [System.Net.WebRequest]::Create('https://work.weixin.qq.com/wework_admin/commdownload?platform=win&from=wwindex')",
+            "$req.Method = 'HEAD'",
+            "$req.AllowAutoRedirect = $false",
+            "$resp = $req.GetResponse()",
+            "$resp.Headers['Location']"
+        ],
         "regex": "WeCom_([\\d.]+).exe"
     },
     "autoupdate": {

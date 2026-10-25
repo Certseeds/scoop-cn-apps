@@ -5,7 +5,7 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "http://download.rising.com.cn/MIDDLE12/pcv17/RavV17std-8E939994/RavV17std.exe",
+            "url": "https://download.rising.com.cn/MIDDLE12/pcv17/RavV17std-8E939994/RavV17std.exe",
             "hash": "25b84680c606ef258d3cb57e0d2a0ad5c4ccc9645369281115af6ed443bf4e65"
         }
     }

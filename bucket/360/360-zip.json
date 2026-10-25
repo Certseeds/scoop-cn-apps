@@ -6,8 +6,13 @@
     "url": "https://dl.360safe.com/360zip_setup.exe",
     "hash": "5ccb093b750f727bf6b90729012771e5a5fc1923a1e58656910a80bc67bbeb62",
     "checkver": {
-        "url": "https://yasuo.360.cn/update.html",
-        "regex": "class=\"date\">([\\d.]+)"
+        "script": [
+            "$tmp = Join-Path $env:TEMP '360zip_setup.exe'",
+            "Invoke-WebRequest 'https://dl.360safe.com/360zip_setup.exe' -OutFile $tmp -UseBasicParsing",
+            "$v = (Get-Item $tmp).VersionInfo.ProductVersion",
+            "Remove-Item $tmp -Force -ErrorAction SilentlyContinue",
+            "$v -replace ',\\s*','.'"
+        ]
     },
     "autoupdate": {
         "url": "https://dl.360safe.com/360zip_setup.exe",

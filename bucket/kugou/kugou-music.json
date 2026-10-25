@@ -3,14 +3,14 @@
     "description": "酷狗音乐",
     "homepage": "https://www.kugou.com/",
     "license": "Freeware",
-    "url": "http://download.kugou.com/download/kugou_pc",
+    "url": "https://download.kugou.com/download/kugou_pc",
     "hash": "673eacd17d48f3a8359ba6786e15c5ab7798fa7cab9bd53582dea821a22317e0",
     "checkver": {
         "url": "https://download.kugou.com/",
         "regex": "V (\\d+(\\.\\d+)+)"
     },
     "autoupdate": {
-        "url": "http://download.kugou.com/download/kugou_pc",
+        "url": "https://download.kugou.com/download/kugou_pc",
         "hash": {
             "mode": "download"
         }

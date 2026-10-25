@@ -10,15 +10,15 @@
         }
     },
     "checkver": {
-        "winget": {
-            "id": "Kingsoft.WPSOffice",
-            "ext": "exe"
-        }
+        "script": [
+            "$names = gh api 'repos/microsoft/winget-pkgs/contents/manifests/k/Kingsoft/WPSOffice' --jq '.[].name'",
+            "$names | Where-Object { $_ -match '^[0-9]' } | Sort-Object { [version]$_ } | Select-Object -Last 1"
+        ]
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "$matchX86",
+                "url": "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/$version/500.1001/WPSOffice_$buildVersion.exe",
                 "hash": {
                     "mode": "download"
                 }
