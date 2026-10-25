@@ -1,0 +1,22 @@
+{
+    "version": "12.4.12.4000",
+    "description": "迅雷",
+    "homepage": "https://www.xunlei.com/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://down.sandai.net/thunder11/XunLeiSetup12.4.12.4000.exe",
+            "hash": "6b386c8ef5ea0b1c2ac9d562ccb70cf9b5b25b37533f3120aca3f46a3770c72d"
+        }
+    },
+    "checkver": {
+        "url": "https://dl.xunlei.com/",
+        "regex": "XunLeiSetup([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://down.sandai.net/thunder11/XunLeiSetup$version.exe",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}
