@@ -1,0 +1,19 @@
+{
+    "version": "2100115009",
+    "description": "搜狗浏览器",
+    "homepage": "https://sogou.browser.qq.com/",
+    "license": "Freeware",
+    "url": "https://pcchannel.imtt.qq.com/channel/SogouExplorer_Setup_2100115009.exe",
+    "hash": "14177228d002799731bbe566c1aea13c242c04c734ade9c999ae47f60fe2d8db",
+    "checkver": {
+        "url": "https://sogou.browser.qq.com/",
+        "regex": "SogouExplorer_Setup_(\\d+)\\.exe",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pcchannel.imtt.qq.com/channel/SogouExplorer_Setup_$version.exe",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}

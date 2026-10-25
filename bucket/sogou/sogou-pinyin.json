@@ -1,0 +1,18 @@
+{
+    "version": "16.9.0.5523",
+    "description": "搜狗拼音输入法",
+    "homepage": "https://pinyin.sogou.com/",
+    "license": "Freeware",
+    "url": "https://ime.gtimg.com/pc/build/_sogou_pinyin_16.9.0.5523_0.exe",
+    "hash": "b7cd6bd32a522213c4b58f958f9b6349e9f95923ada64d7ebc8ba7fb879ddbb3",
+    "checkver": {
+        "url": "https://pinyin.sogou.com/windows/?t=pinyin",
+        "regex": "sogou_pinyin_([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://ime.gtimg.com/pc/build/_sogou_pinyin_$version_0.exe",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}
