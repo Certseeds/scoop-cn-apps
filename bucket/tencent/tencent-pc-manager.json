@@ -1,0 +1,19 @@
+{
+    "version": "310063",
+    "description": "腾讯电脑管家",
+    "homepage": "https://guanjia.qq.com/",
+    "license": "Freeware",
+    "url": "https://pm.myapp.com/invc/xfspeed/qqpcmgr/download/QQPCDownload_home_310063.exe",
+    "hash": "e80b39a07ceea1ba81611a66d1bda06203cb0a76fa57ae4d6fad6fb4b33e0140",
+    "checkver": {
+        "url": "https://guanjia.qq.com/main.html",
+        "regex": "QQPCDownload_home_(\\d+)\\.exe",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pm.myapp.com/invc/xfspeed/qqpcmgr/download/QQPCDownload_home_$version.exe",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}

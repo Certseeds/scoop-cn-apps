@@ -1,0 +1,26 @@
+{
+    "version": "6.9.11.23618",
+    "description": "起点读书",
+    "homepage": "https://www.qidian.com/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "http://dldir1.qq.com/qqfile/crm/qidian/QiDian6.9.11.23618.exe",
+            "hash": "bbd53e106f33376e797afb6f77c8936942e9f17a27acbd482151c707806d51eb"
+        }
+    },
+    "checkver": {
+        "url": "https://www.qidian.com/",
+        "regex": "QiDian([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://dldir1.qq.com/qqfile/crm/qidian/QiDian$version.exe",
+                "hash": {
+                    "mode": "download"
+                }
+            }
+        }
+    }
+}

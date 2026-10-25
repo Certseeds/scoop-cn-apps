@@ -1,0 +1,28 @@
+{
+    "version": "3.11.8",
+    "description": "腾讯文档",
+    "homepage": "https://docs.qq.com/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://desktop.docs.qq.com/update/release/3.11.8/TencentDocs3.11.8.x64.30002.exe",
+            "hash": "c793a7fff0f64e085c0f90265c2f230d1a1ae794b70905ec4a6ebc9888d0d0a5"
+        }
+    },
+    "checkver": {
+        "winget": {
+            "id": "Tencent.TencentDocs",
+            "ext": "exe"
+        }
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "$matchX64",
+                "hash": {
+                    "mode": "download"
+                }
+            }
+        }
+    }
+}

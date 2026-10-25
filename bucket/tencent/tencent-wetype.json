@@ -1,0 +1,28 @@
+{
+    "version": "3.0.1.11",
+    "description": "微信输入法",
+    "homepage": "https://z.weixin.qq.com/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.z.weixin.qq.com/app/win/WeTypeSetup_3.0.1.11_3.exe",
+            "hash": "62c5fe6916639762e018c75623cf3f584791add35298e56cd333e35ce5f1e594"
+        }
+    },
+    "checkver": {
+        "winget": {
+            "id": "Tencent.WeType",
+            "ext": "exe"
+        }
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "$matchX64",
+                "hash": {
+                    "mode": "download"
+                }
+            }
+        }
+    }
+}

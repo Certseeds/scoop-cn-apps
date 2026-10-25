@@ -1,0 +1,27 @@
+{
+    "version": "9.9.33.260813",
+    "description": "QQ（NT 版）",
+    "homepage": "https://im.qq.com/pcqq/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://qqdl.gtimg.cn/qqfile/QQNT/9.9.33/release/497e2f1f/QQ_9.9.33_260813_x64_01.exe",
+            "hash": "b25c0d3ce9df764074a9118d0ded927e1b2d7ebf60e306112e8df18a040ec492"
+        }
+    },
+    "checkver": {
+        "url": "https://im.qq.com/proxy/domain/cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/pcConfig.json",
+        "regex": "Windows\":\\{\"version\":\"([\\d.]+)\",\"updateDate\":\"20([\\d]+)-([\\d]+)-([\\d]+)\".*gtimg\\.cn\\/([\\w\\-\\/.]+x86_01.exe).*gtimg\\.cn\\/([\\w\\-\\/.]+x64_01.exe).*gtimg\\.cn\\/([\\w\\-\\/.]+arm64_01.exe)\"",
+        "replace": "${1}.${2}${3}${4}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://qqdl.gtimg.cn/$match6",
+                "hash": {
+                    "mode": "download"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "version": "4.1.15.56",
+    "description": "微信（Universal 版）",
+    "homepage": "https://weixin.qq.com/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://dldir1v6.qq.com/weixin/Universal/Windows/WeChatWin_4.1.15.exe",
+            "hash": "4422bad98617dd095005c7879b2190f188ffa9ad6abf79e075358cf981a3d9e4"
+        }
+    },
+    "checkver": {
+        "winget": {
+            "id": "Tencent.WeChat.Universal",
+            "ext": "exe"
+        }
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "$matchX64",
+                "hash": {
+                    "mode": "download"
+                }
+            }
+        }
+    }
+}

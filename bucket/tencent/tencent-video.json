@@ -1,0 +1,26 @@
+{
+    "version": "11.183.1192.0",
+    "description": "腾讯视频",
+    "homepage": "https://v.qq.com/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://dldir1.qq.com/qqtv/TencentVideo11.183.1192.0.exe",
+            "hash": "10ceb1a2bede91cbc0d053d7841760dd7927421a0ae5019e2436442a932dc4cb"
+        }
+    },
+    "checkver": {
+        "url": "https://v.qq.com/download.html",
+        "regex": "//(?<url>[^\"]+)/TencentVideo([\\d\\.]+)\\.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dldir1.qq.com/qqtv/TencentVideo$version.exe",
+                "hash": {
+                    "mode": "download"
+                }
+            }
+        }
+    }
+}

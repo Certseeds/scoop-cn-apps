@@ -1,0 +1,28 @@
+{
+    "version": "2.89.0",
+    "description": "腾讯元宝",
+    "homepage": "https://yuanbao.tencent.com/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn-hybrid-prod.hunyuan.tencent.com/Desktop/official/54a86f32e33b8d8cbbadf3f1e1943822/yuanbao_2.89.0.612_x64.exe",
+            "hash": "83f42b12f6723cfc680d99d16d13427c569f8d9abbc1b175f53a7c157dceb846"
+        }
+    },
+    "checkver": {
+        "winget": {
+            "id": "Tencent.Yuanbao",
+            "ext": "exe"
+        }
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "$matchX64",
+                "hash": {
+                    "mode": "download"
+                }
+            }
+        }
+    }
+}
