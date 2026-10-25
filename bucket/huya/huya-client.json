@@ -1,0 +1,8 @@
+{
+    "version": "7.5.0.0",
+    "description": "虎牙直播",
+    "homepage": "https://www.huya.com/",
+    "license": "Freeware",
+    "url": "https://download.huya.com/huyapc/install/HuyaClientInstall.exe",
+    "hash": "0d4d201cbe68ea58c6da2b4981f867b78148fe815dd6dc51bd931c59dbea2175"
+}
