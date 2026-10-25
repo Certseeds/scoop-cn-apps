@@ -1,0 +1,22 @@
+{
+    "version": "6.6.0.11316",
+    "description": "2345好压",
+    "homepage": "https://haozip.2345.cc/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.caomeiyhu.com/haozip/own/haozip_v6.6.0.11316.exe",
+            "hash": "d1afe734f529ce1231cc6b4b7d15adcf165f89fe51d99a0837c4c76c32c40495"
+        }
+    },
+    "checkver": {
+        "url": "https://haozip.2345.cc/",
+        "regex": "haozip_v([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://download.caomeiyhu.com/haozip/own/haozip_v$version.exe",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}

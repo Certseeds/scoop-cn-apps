@@ -1,0 +1,19 @@
+{
+    "version": "8.3.0.8508",
+    "description": "2345王牌输入法",
+    "homepage": "https://pinyin.2345.cc/",
+    "license": "Freeware",
+    "url": "https://download.caomeiyhu.com/pinyin/own/2345pinyin_v8.3.0.8508.exe",
+    "hash": "05f0b79953594d761c928741ff79bc0b9b0b8abe10fa56238a837a1c7f2e8f30",
+    "checkver": {
+        "url": "https://pinyin.2345.cc/",
+        "regex": "2345pinyin_v([\\d.]+)\\.exe",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://download.caomeiyhu.com/pinyin/own/2345pinyin_v$version.exe",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}

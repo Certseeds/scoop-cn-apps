@@ -1,0 +1,22 @@
+{
+    "version": "13.7.0.12870",
+    "description": "2345看图王",
+    "homepage": "https://pic.2345.cc/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.caomeiyhu.com/pic/own/2345pic_x64_v13.7.0.12870.exe",
+            "hash": "d1fa01fd38590501165688758d4370ab2fd5e91bd4617a138c7af7eafe676ad4"
+        }
+    },
+    "checkver": {
+        "url": "https://img-pinyin.2345cdn.net/agreement/p_18/8824994b08.json",
+        "regex": "2345pic_x64_v([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://download.caomeiyhu.com/pic/own/2345pic_x64_v$version.exe",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}

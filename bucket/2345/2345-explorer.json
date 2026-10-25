@@ -1,0 +1,23 @@
+{
+    "version": "000601",
+    "description": "2345加速浏览器（2345Explorer）",
+    "homepage": "https://www.2345.com/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://dl-ie.rcwl.com/dh/2345Explorer_000601.exe",
+            "hash": "e14ce6740ee291b28d0868d52b122b663a2c7cc2b1b62f7c0c6ab8585ff3dc2c"
+        }
+    },
+    "checkver": {
+        "url": "https://www.2345.com/",
+        "regex": "2345Explorer_(\\d+)\\.exe",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://dl-ie.rcwl.com/dh/2345Explorer_$version.exe",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}

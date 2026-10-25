@@ -1,0 +1,18 @@
+{
+    "version": "8.17",
+    "description": "2345安全卫士",
+    "homepage": "https://safe.2345.cc/",
+    "license": "Freeware",
+    "url": "https://download.2345.com/2345pcsafe/background/20241203/2345PCSafeoffline.exe",
+    "hash": "5ff6b854b5a096a445925f60d16927676d7839d94132ee657b197fcbe021625b",
+    "checkver": {
+        "url": "https://safe.2345.cc/",
+        "regex": "2345PCSafe_v([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://download.2345.com/2345pcsafe/background/20241203/2345PCSafeoffline.exe",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}

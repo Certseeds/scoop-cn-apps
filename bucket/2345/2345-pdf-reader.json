@@ -1,0 +1,23 @@
+{
+    "version": "10.6.0.9503",
+    "description": "2345PDF阅读器",
+    "homepage": "https://haozip.2345.cc/pdf.htm",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.caomeiyhu.com/pic/own/2345PdfReader_000005_v10.6.0.9503.exe",
+            "hash": "98823a8a0fa787a3148667c38408ac872275f5e6b829888e14bfc9a498012625"
+        }
+    },
+    "checkver": {
+        "url": "https://haozip.2345.cc/pdf.htm",
+        "regex": "2345PdfReader_(\\d+)_v([\\d.]+)\\.exe",
+        "replace": "${2}"
+    },
+    "autoupdate": {
+        "url": "https://download.caomeiyhu.com/pic/own/2345PdfReader_$match1_v$version.exe",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}
