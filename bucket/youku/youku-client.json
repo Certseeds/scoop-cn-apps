@@ -1,0 +1,26 @@
+{
+    "version": "9.5.4.1001",
+    "description": "优酷客户端",
+    "homepage": "https://www.youku.com/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://pcclient.download.youku.com/iku-win-release/youkuclient_setup_9.5.4.1001.exe",
+            "hash": "9318b7c7f1203cbab696a9617a6cace35f2252a42d378f04d121d724d170e874"
+        }
+    },
+    "checkver": {
+        "url": "https://www.youku.com/",
+        "regex": "youkuclient_setup_([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://pcclient.download.youku.com/iku-win-release/youkuclient_setup_$version.exe",
+                "hash": {
+                    "mode": "download"
+                }
+            }
+        }
+    }
+}
