@@ -1,0 +1,22 @@
+{
+    "version": "23.1.1200.64",
+    "description": "360极速浏览器X",
+    "homepage": "https://browser.360.cn/eex/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://down.360safe.com/cse/360csex_23.1.1200.64.exe",
+            "hash": "2edada4f3e5a83ca13746ac596801a8fb783286341f27c5a7716c626acca79d9"
+        }
+    },
+    "checkver": {
+        "url": "https://browser.360.cn/eex/",
+        "regex": "360csex_([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://down.360safe.com/cse/360csex_$version.exe",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}

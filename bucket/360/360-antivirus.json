@@ -1,0 +1,22 @@
+{
+    "version": "7.0.0.1070A",
+    "description": "360杀毒",
+    "homepage": "https://sd.360.cn/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://dl.360scdn.com/360sd/360sd_x64_std_7.0.0.1070A.exe",
+            "hash": "4017c6f95c3e2fa741218ff2c905ea55e822ed9b68e6cc31d9a556801df02858"
+        }
+    },
+    "checkver": {
+        "url": "https://sd.360.cn/download_center.html",
+        "regex": "360sd_x64_std_([\\d.]+A?)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://dl.360scdn.com/360sd/360sd_x64_std_$version.exe",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}
