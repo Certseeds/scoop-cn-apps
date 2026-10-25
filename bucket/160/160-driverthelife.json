@@ -1,0 +1,23 @@
+{
+    "version": "10.3.63.136",
+    "description": "驱动人生",
+    "homepage": "https://www.160.com/",
+    "license": "Freeware",
+    "url": "https://file1.updrv.com/soft/DriveTheLife/10_3_63_136/DriveTheLife_1111_10_3_63_136.exe",
+    "hash": "2a51f99256935ebfe40abd9aba948c6bb55d0c917ac0d8d8ec3101c73f6868e9",
+    "checkver": {
+        "script": [
+            "$page = (Invoke-WebRequest 'https://qd.160.com/' -UseBasicParsing).Content",
+            "$m = [regex]::Match($page, 'DriveTheLife_(\\d+)_([\\d_]+)\\.exe[^>]*>.*?<span>v([\\d.]+)</span>')",
+            "Write-Output ($m.Groups[3].Value + '|' + $m.Groups[1].Value + '|' + $m.Groups[2].Value)"
+        ],
+        "regex": "([\\d.]+)\\|(\\d+)\\|([\\d_]+)",
+        "replace": "${1}"
+    },
+    "autoupdate": {
+        "url": "https://file1.updrv.com/soft/DriveTheLife/$match3/DriveTheLife_$match2_$match3.exe",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}
