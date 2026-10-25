@@ -1,0 +1,17 @@
+{
+    "version": "1.92.120",
+    "description": "WPS 会议",
+    "homepage": "https://meeting.wps.cn/",
+    "license": "Freeware",
+    "url": "https://kmeeting.wpscdn.cn/desktop/1.92/kmeeting_1.92.120.exe",
+    "hash": "1c6fe31f134ce3e59209b71def98f5eeffe9b3cce94fe85f39afe5c3dad3c5c2",
+    "checkver": {
+        "regex": "kmeeting_([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://kmeeting.wpscdn.cn/desktop/$majorVersion.$minorVersion/kmeeting_$version.exe",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}

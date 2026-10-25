@@ -1,0 +1,26 @@
+{
+    "version": "12.1.0.29161",
+    "description": "WPS Office 中文版（国内签名，慢速源，最后执行）",
+    "homepage": "https://www.wps.cn/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://official-package.wpscdn.cn/wps/download/WPS_Setup_29161.exe",
+            "hash": "d5a7d632411c73962a2e1ee8d5545fe125f414ad845f8de7f5dc393c4e10f391"
+        }
+    },
+    "checkver": {
+        "url": "https://wps.cn/platformUrls",
+        "jsonpath": "$.productDetail.productVcode"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://official-package.wpscdn.cn/wps/download/WPS_Setup_$buildVersion.exe",
+                "hash": {
+                    "mode": "download"
+                }
+            }
+        }
+    }
+}
