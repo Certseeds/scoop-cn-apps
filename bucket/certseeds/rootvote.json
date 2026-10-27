@@ -1,0 +1,25 @@
+{
+    "version": "0.1.1",
+    "description": "a cli tool to remove the https certs in Ur windows device",
+    "homepage": "https://github.com/Certseeds/rootvote",
+    "license": "AGPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Certseeds/rootvote/releases/download/v0.1.1/rootvote_0.1.1_windows_amd64.tgz",
+            "hash": "38f1a1beff95618da618af379f28e74415c04bf9c8e5e1fe49bbcb96b20989be"
+        }
+    },
+    "extract_dir": "rootvote-0.1.1",
+    "bin": "rootvote.exe",
+    "checkver": {
+        "github": "https://github.com/Certseeds/rootvote"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Certseeds/rootvote/releases/download/v$version/rootvote_$version_windows_amd64.tgz"
+            }
+        },
+        "extract_dir": "rootvote-$version"
+    }
+}
