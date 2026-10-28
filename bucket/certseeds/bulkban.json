@@ -1,0 +1,25 @@
+{
+    "version": "0.0.1",
+    "description": "a cli tool to ban the application cert in Ur windows device",
+    "homepage": "https://github.com/Certseeds/bulkban",
+    "license": "AGPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Certseeds/bulkban/releases/download/v0.0.1/bulkban-0.0.1-win-x64.zip",
+            "hash": "594d2bc08543feb66858a2beae768ec5f20e097fde887188e5ed059e208f190c"
+        }
+    },
+    "extract_dir": "bulkban-0.0.1",
+    "bin": "bulkban.exe",
+    "checkver": {
+        "github": "https://github.com/Certseeds/bulkban"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Certseeds/bulkban/releases/download/v$version/bulkban-$version-win-x64.zip"
+            }
+        },
+        "extract_dir": "bulkban-$version"
+    }
+}
