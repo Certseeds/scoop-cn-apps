@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/Certseeds/signscan/releases/download/v0.0.1/signscan-v0.0.1-win-x64.zip",
-            "hash": "49f86b1fee4423e61e3018ad1ae66d87806f255f0d99017eed5ccc60fe720fa9"
+            "hash": "905d5d178ccf60af92e3da62b2a5dd9a49954e11df33546f1c940a7e0c8cfe8c"
         }
     },
     "extract_dir": "signscan-v0.0.1-win-x64",
