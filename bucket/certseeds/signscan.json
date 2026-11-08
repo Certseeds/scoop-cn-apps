@@ -1,15 +1,14 @@
 {
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "a cli tool to scan the application signing cert in a folder",
     "homepage": "https://github.com/Certseeds/signscan",
     "license": "AGPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Certseeds/signscan/releases/download/v0.0.1/signscan-v0.0.1-win-x64.zip",
-            "hash": "905d5d178ccf60af92e3da62b2a5dd9a49954e11df33546f1c940a7e0c8cfe8c"
+            "url": "https://github.com/Certseeds/signscan/releases/download/v0.0.2/signscan-v0.0.2-win-x64.zip",
+            "hash": "0f6ffc5443bfc2f70215e50d01597f4b0e28add625602ddd36a1134261fd3c9e"
         }
     },
-    "extract_dir": "signscan-v0.0.1-win-x64",
     "bin": "signscan.exe",
     "checkver": {
         "github": "https://github.com/Certseeds/signscan"
@@ -19,7 +18,6 @@
             "64bit": {
                 "url": "https://github.com/Certseeds/signscan/releases/download/v$version/signscan-v$version-win-x64.zip"
             }
-        },
-        "extract_dir": "signscan-v$version-win-x64"
+        }
     }
 }
